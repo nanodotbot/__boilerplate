@@ -1,0 +1,156 @@
+@import url(./base.css);
+
+html {
+    /* https://css-tricks.com/almanac/properties/s/scroll-snap-type/ */
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    text-align: left;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+h5 {
+    font-size: 2.8rem;
+}
+h6 {
+    font-size: 2.5rem;
+}
+
+p {
+    margin: 1.5rem auto;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+
+    transition: var(--transition-fast);
+
+    color: var(--link-text);
+
+    cursor: context-menu;
+}
+
+a:hover {
+    color: var(--link-hover-text);
+    background-color: var(--link-hover-bg);
+}
+
+form {
+    margin: var(--default-margin);
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;;
+
+    padding: 0.3rem .5rem;
+    margin: .1rem auto 2rem auto;
+
+    background-color: var(--background);
+
+    border: none;
+    border-bottom: 0.1rem solid var(--input-border);
+
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+
+    transition: var(--transition-fast);
+
+    outline: none;
+}
+input:focus,
+textarea:focus {
+    border: none;
+    border-bottom: 0.1rem solid var(--input-focus-border);
+}
+input {
+    min-height: 3.2rem;
+}
+textarea {
+    resize: none;
+	overflow: hidden; /* prevents scroll bar flash */
+}
+
+
+label {
+    display: block;
+    font-size: var(--font-size-small);
+}
+
+/* outdated 
+input:focus + label,
+textarea:focus + label {
+    color: var(--link-secondary);
+
+    transition: var(--transition-fast);
+}
+*/
+
+button {
+    width: 100%;
+
+    padding: .7rem 2rem;
+    
+    border: none;
+    outline: none;
+    border-radius: .2rem;
+
+    margin: 0 auto 1rem auto;
+
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+button:hover {
+    color: var(--button-hover-text);
+    background-color: var(--button-hover-bg);
+
+    transition: var(--transition-fast);
+}
+
+button.disabled {
+    color: var(--button-disabled-text);
+    background-color: var(--button-disabled-bg);
+}
+
+img, video { /* TODO: check */
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+
+    margin: var(--default-margin);
+}
+
+hr {
+    border: 0;
+    border-top: var(--border);
+}

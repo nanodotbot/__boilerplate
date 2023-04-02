@@ -1,0 +1,31 @@
+.toggle-input {
+    display: none;
+}
+label.toggle-label {
+    display: block;
+    height: var(--toggle-height);
+    width: var(--toggle-width);
+    border-radius: var(--toggle-border-radius);
+    background-color: var(--toggle-bg);
+
+    padding: 0;
+}
+label.toggle-label::before {
+    content: '';
+    display: block;
+    height: var(--toggle-height);
+    width: var(--toggle-height);
+    border-radius: var(--toggle-border-radius);
+
+    background-color: var(--toggle-switch-bg);
+
+    transition: var(--transition-slow);
+}
+input.toggle-input:checked + label.toggle-label {
+    background-color: var(--toggle-checked-bg);
+}
+
+input.toggle-input:checked + label.toggle-label::before {
+    position: relative;
+    left: var(--toggle-height);
+}

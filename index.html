@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boilerplate</title>
+
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="stylesheet" href="./articles.css">
+    <link rel="stylesheet" href="./_header-footer/header-footer.css">
+    <link rel="stylesheet" href="./_code/code.css">
+
+    <script src="./_textarea/textarea.js" defer></script>
+
+    <script src="./_textarea/submit.js" defer></script>
+    <link rel="stylesheet" href="./_textarea/submit.css">
+
+    <link rel="stylesheet" href="./_navigation/nav.css">
+    <script src="./_navigation/nav.js" defer></script>
+
+    <link rel="stylesheet" href="./_show-imgs/show-imgs.css">
+    <script src="./_show-imgs/show-imgs.js" defer></script>
+
+    <script src="./_intersection-observer/intersection-observer.js" defer></script>
+
+    <link rel="stylesheet" href="./_toggle/toggle.css">
+    
+    <script src="./toggle-mode/toggle-mode.js" defer></script>
+
+    <link rel="stylesheet" href="./color-picker/color-picker.css">
+    <script src="./color-picker/color-picker.js" defer></script>
+
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+</head>
+
+<body>
+    <div id="nav-container">
+        <nav id="links">
+            <a href="#code" class="link">Code</a>
+            <a href="#login" class="link">Login</a>
+            <a href="#textarea" class="link">Textarea</a>
+            <a href="#theme" class="link">Theme</a>
+        </nav>
+        <div id="menu">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </div>
+    </div>
+    <nav id="nav-screen">
+        <a href="#code" class="link screen-link">Code</a>
+        <a href="#login" class="link screen-link">Login</a>
+        <a href="#textarea" class="link screen-link">Textarea</a>
+        <a href="#theme" class="link screen-link">Theme</a>
+    </nav>
+
+    <header id="header" class="intersection">
+        <div>
+            <h1 id="function">boilerplate</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <article id="code" class="intersection">
+            <h2>code</h2>
+            <p>just some text</p>
+            <pre class="code-block"><code>just some code block
+some more code
+            </code></pre>
+        </article>
+
+        <article id="login" class="intersection">
+            <form>
+                <div>
+                    <label for="username">Nutzername</label>
+                    <input type="text" name="username" id="username" autofocus>
+                </div>
+                <div>
+                    <label for="password">Passwort</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <button id="loginBtn">Anmelden</button>
+            </form>
+        </article>
+
+        <article id="textarea" class="intersection">
+
+            <h2>textarea</h2>
+            <form>
+                <label for="message">enter some text</label>
+                <textarea name="message" id="message"></textarea>
+                <button id="send">submit form</button>
+                <p id="feedback"></p>
+            </form>
+
+        </article>
+
+        <article id="theme" class="intersection">
+
+            <h2>theme</h2>
+
+            <div class="grid">
+                <p>light</p>
+                <div>
+                    <input type="checkbox" class="toggle-input" id="toggle-1">
+                    <label for="toggle-1" class="toggle-label" id="toggle-label"></label>
+                </div>
+                <p>dark</p>
+            </div>
+            <div class="grid color-picker">
+                <label for="blue" class="blue">
+                    <input type="radio" name="color-picker" id="blue">
+                </label>
+                <label for="green" class="green">
+                    <input type="radio" name="color-picker" id="green">
+                </label>
+                <label for="red" class="red">
+                    <input type="radio" name="color-picker" id="red">
+                </label>
+            </div>
+            <input type="checkbox" class="toggle-input" id="toggle-2">
+            <label for="toggle-2" class="toggle-label"></label>
+
+            <p><a href="http://notanumber.ch" target="_blank" rel="noopener noreferrer">notanumber.ch</a>
+            </p>
+            <form>
+                <label for="blue-input">input</label>
+                <input class="v1-1" type="text" name="blue-input">
+                <button>enabled</button>
+                <button class="disabled">disabled</button>
+            </form>
+
+        </article>
+
+    </main>
+
+    <footer id="footer" class="intersection">
+        <a href="https://notanumber.ch" target="_blank">notanumber.ch</a>
+        <a href="./404.html">404.html</a>
+    </footer>
+
+    <div id="large-img-container">
+        <img id="large-img" src="./imgs/pexels-eberhard-grossgasteiger-572897.jpg">
+    </div>
+
+</body>
+
+</html>
