@@ -7,143 +7,285 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>boilerplate</title>
 
+    <link rel="icon" type="image/png" href="./imgs/favicon.ico">
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./_header.css">
+    <link rel="stylesheet" href="./_footer.css">
 
-    <link rel="stylesheet" href="./articles.css">
-    <link rel="stylesheet" href="./_header-footer/header-footer.css">
-    <link rel="stylesheet" href="./_code/code.css">
+    <link rel="stylesheet" href="./_navigation.css">
+    <script src="./_navigation.js" defer></script>
 
-    <script src="./_textarea/textarea.js" defer></script>
+    <script src="_intersecting.js" defer></script>
 
-    <script src="./_textarea/submit.js" defer></script>
-    <link rel="stylesheet" href="./_textarea/submit.css">
+    <script src="./_textarea.js" defer></script>
+    <script src="./_modal.js" defer></script>
+    <link rel="stylesheet" href="./_image-modal.css">
+    <script src="./_image-modal.js" defer></script>
 
-    <link rel="stylesheet" href="./_navigation/nav.css">
-    <script src="./_navigation/nav.js" defer></script>
+    <link rel="stylesheet" href="./_theme.css">
+    <link rel="stylesheet" href="./_theme-color-picker.css">
+    <script src="./_theme-modal-open.js" defer></script>
+    <script src="./_theme-themes.js" defer></script>
+    <script src="./_theme-colors.js" defer></script>
+    <script src="./_theme-toggle.js" defer></script>
+    <script src="./_theme-color-picker.js" defer></script>
 
-    <link rel="stylesheet" href="./_show-imgs/show-imgs.css">
-    <script src="./_show-imgs/show-imgs.js" defer></script>
-
-    <script src="./_intersection-observer/intersection-observer.js" defer></script>
-
-    <link rel="stylesheet" href="./_toggle/toggle.css">
-    
-    <script src="./toggle-mode/toggle-mode.js" defer></script>
-
-    <link rel="stylesheet" href="./color-picker/color-picker.css">
-    <script src="./color-picker/color-picker.js" defer></script>
-
-    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="./c-element.js" defer></script>
 </head>
 
 <body>
-    <div id="nav-container">
-        <nav id="links">
-            <a href="#code" class="link">Code</a>
-            <a href="#login" class="link">Login</a>
-            <a href="#textarea" class="link">Textarea</a>
-            <a href="#theme" class="link">Theme</a>
-        </nav>
-        <div id="menu">
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-        </div>
-    </div>
-    <nav id="nav-screen">
-        <a href="#code" class="link screen-link">Code</a>
-        <a href="#login" class="link screen-link">Login</a>
-        <a href="#textarea" class="link screen-link">Textarea</a>
-        <a href="#theme" class="link screen-link">Theme</a>
+
+    <nav id="nav-modal">
+        <a href="#article" class="link modal-link">modallink</a>
+        <a href="#blockquote" class="link modal-link">modallink</a>
+        <a href="#link" class="link modal-link">modallink</a>
+        <a href="#input" class="link modal-link">modallink</a>
     </nav>
 
-    <header id="header" class="intersection">
+    <div id="nav-header">
+
+        <a id="logo" href="./index.html"><img src="./imgs/logo.png" alt="the logo, a bright red, blurred circle"></a>
+
+        <nav id="nav-links">
+            <a href="#article" class="link">navlink</a>
+            <a href="#blockquote" class="link">navlink</a>
+            <a href="#link" class="link">navlink</a>
+            <a href="#input" class="link">navlink</a>
+        </nav>
+
+        <div id="nav-menu">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </div>
+
+    </div>
+
+
+    <header id="header">
+
         <div>
             <h1 id="function">boilerplate</h1>
+            <p>this is just some boilerplate code – nicely structured and reusable</p>
         </div>
+
     </header>
+
 
     <main>
 
-        <article id="code" class="intersection">
-            <h2>code</h2>
-            <p>just some text</p>
-            <pre class="code-block"><code>just some code block
-some more code
-            </code></pre>
-        </article>
+        <article id="form">
 
-        <article id="login" class="intersection">
+            <h2>a login form</h2>
             <form>
                 <div>
                     <label for="username">Nutzername</label>
-                    <input type="text" name="username" id="username" autofocus>
+                    <input type="text" name="username" id="username" autocomplete="on" autofocus>
                 </div>
                 <div>
                     <label for="password">Passwort</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" autocomplete="on">
                 </div>
-                <button id="loginBtn">Anmelden</button>
+                <button id="login-button">Anmelden</button>
             </form>
+            <p id="login-feedback" class="form-feedback feedback"></p>
+
         </article>
 
-        <article id="textarea" class="intersection">
+        <article id="textarea">
 
-            <h2>textarea</h2>
+            <h2>a textarea</h2>
             <form>
                 <label for="message">enter some text</label>
-                <textarea name="message" id="message"></textarea>
+                <textarea id="message" class="textarea" name="message" ></textarea>
                 <button id="send">submit form</button>
-                <p id="feedback"></p>
             </form>
+            <p id="message-feedback" class="textarea-feedback feedback"></p>
+
+            <!-- .textarea + .textarea-feedback for js -->
+            <!-- .feedback for css -->
 
         </article>
 
-        <article id="theme" class="intersection">
+        <article id="code">
 
-            <h2>theme</h2>
+            <h2>some code</h2>
+            <pre class="code-block"><code>just some code block
+some more code that certainly or at least hopefully exceeds a single line, or else i just a some more text so it will for sure exceed a single line</code></pre>
 
-            <div class="grid">
-                <p>light</p>
-                <div>
-                    <input type="checkbox" class="toggle-input" id="toggle-1">
-                    <label for="toggle-1" class="toggle-label" id="toggle-label"></label>
+        </article>
+
+        <article id="modal">
+
+            <h2>a modal</h2>
+            <button id="open-modal-1">open modal</button>
+
+            <div id="modal-1" class="modal">
+
+                <div id="modal-1-inner" class="modal-inner">
+
+                    <div class="modal-header">
+
+                        <button class="modal-close link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z"/></svg></button>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <h2>a modal</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto commodi odit voluptatum repudiandae sint iste laborum magni. Magnam quam sed ipsum, placeat quas ut alias quasi mollitia assumenda. Tenetur, eaque.</p>
+
+                    </div>
+
                 </div>
-                <p>dark</p>
-            </div>
-            <div class="grid color-picker">
-                <label for="blue" class="blue">
-                    <input type="radio" name="color-picker" id="blue">
-                </label>
-                <label for="green" class="green">
-                    <input type="radio" name="color-picker" id="green">
-                </label>
-                <label for="red" class="red">
-                    <input type="radio" name="color-picker" id="red">
-                </label>
-            </div>
-            <input type="checkbox" class="toggle-input" id="toggle-2">
-            <label for="toggle-2" class="toggle-label"></label>
 
-            <p><a href="http://notanumber.ch" target="_blank" rel="noopener noreferrer">notanumber.ch</a>
-            </p>
+            </div>
+
+        </article>
+
+        <article>
+
+            <h2>an image modal</h2>
+
+            <img src="./imgs/logo.png" alt="the logo, a red blurred circle">
+
+            <div id="image-modal-wrapper">
+
+                <img id="image-modal-image" src="./imgs/logo.png">
+                
+            </div>
+        
+
+        </article>
+
+        <article id="spinner">
+
+            <h2>a spinner</h2>
+            <div class="spinner">
+                <div></div>
+            </div>
+
+        </article>
+
+        <article id="theme">
+
+            <h2>a theme modal</h2>
+
+            <button id="theme-modal-open">open theme modal</button>
+
+            <div id="theme-modal" class="modal">
+
+                <div id="theme-modal-inner" class="modal-inner">
+    
+                    <div id="theme-modal-header" class="modal-header">
+                        
+                        <button id="close-modal" class="modal-close link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z" /></svg></button>
+                        
+                    </div>
+    
+                    <div id="theme">
+    
+                        <h2>Farbschema</h2>
+                        
+                        <div class="theme-picker">
+    
+                            <div id="light">
+                                <p>hell</p>
+                            </div>
+                            
+                            <div>
+                                <input type="checkbox" class="toggle-input" id="theme-toggle">
+                                <label for="theme-toggle" class="toggle-label" id="theme-toggle-label"></label>
+                            </div>
+                            
+                            <div id="dark">
+                                <p>dunkel</p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="color-picker">
+                            
+                            <label for="blue" class="blue">
+                                <input type="radio" name="color-picker" id="blue">
+                            </label>
+                            
+                            <label for="green" class="green">
+                                <input type="radio" name="color-picker" id="green">
+                            </label>
+                            
+                            <label for="red" class="red">
+                                <input type="radio" name="color-picker" id="red">
+                            </label>
+                            
+                        </div>
+    
+                        <div id="theme-save-meta">
+
+                            <p>Farbschema speichern</p>
+
+                            <input type="checkbox" class="toggle-input" id="theme-save-toggle">
+                            <label for="theme-save-toggle" class="toggle-label" id="theme-save-toggle-label"></label>
+
+                        </div>
+                        
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </article>
+
+        <!-- <article id="buttons">
+
             <form>
                 <label for="blue-input">input</label>
-                <input class="v1-1" type="text" name="blue-input">
+                <input class="v1-1" type="text" id="blue-input" name="blue-input">
                 <button>enabled</button>
                 <button class="disabled">disabled</button>
             </form>
+
+        </article> -->
+
+        <article id="webcomponent">
+
+            <h2>a web component</h2>
+            <c-element title="a title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quasi itaque recusandae obcaecati non unde rerum perferendis laboriosam distinctio neque! Impedit ad omnis aliquid asperiores ab quisquam, laudantium tempore iure!"></c-element>
 
         </article>
 
     </main>
 
-    <footer id="footer" class="intersection">
+    <footer>
+
         <a href="https://notanumber.ch" target="_blank">notanumber.ch</a>
         <a href="./404.html">404.html</a>
+        <hr>
+        <button id="open-modal-2" class="link">Bildquelle</button>
+
     </footer>
 
-    <div id="large-img-container">
-        <img id="large-img" src="./imgs/pexels-eberhard-grossgasteiger-572897.jpg">
+    <div id="modal-2" class="modal">
+
+        <div id="modal-2-inner" class="modal-inner">
+
+            <div class="modal-header">
+
+                <button id="close-modal-2" class="modal-close link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z"/></svg></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h2>Bildquelle</h2>
+                <p><a href="https://www.freepik.com/free-photo/dark-abstract-wallpaper-background-smoke-texture_17580894.htm" target="_blank">Image by rawpixel.com on Freepik</a></p>
+
+            </div>
+
+        </div>
+
     </div>
 
 </body>

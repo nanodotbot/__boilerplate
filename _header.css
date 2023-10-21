@@ -1,0 +1,24 @@
+header {
+  padding: calc(2 * var(--default-gap)) 0;
+  margin-bottom: calc(2 * var(--default-gap));
+  background-image: url('../imgs/dark-abstract-wallpaper-background-smoke-texture - opacity.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header > div {
+  width: 700px;
+  max-width: 96vw;
+  margin: 0 auto;
+}
+header > div > h1,
+header > div > p {
+  text-align: center;
+  color: var(--white);
+}
+header > div > h1 {
+  font-size: calc(4rem + 5vw);
+}
+header > div > p {
+  font-size: 2rem;
+}
