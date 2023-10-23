@@ -1,22 +1,26 @@
-.image-modal-:hover {
+/* .image-modal-image:hover {
     filter: brightness(1.1);
-}
+} */
 
-#show-img-wrapper {
+#image-modal {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 5;
     height: 100vh;
-    width: 100vw;
-    
+    width: calc(100vw - (100vw - 100%));
+        
     display: none;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     background-color: var(--background);
 }
-#show-img {
+#image-modal.open {
+    display: grid;
+}
+#image-modal-header {
+    text-align: right;
+}
+#image-modal-image {
     display: block;
-    max-height: 100vh;
-    max-width: 100vw;
 }

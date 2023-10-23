@@ -1,17 +1,16 @@
-const showImgs = document.querySelectorAll('.show-imgs');
+const modalImages = document.querySelectorAll('.image-modal-image');
 
-const showImg = document.querySelector('#show-img');
-const showImgWrapper = document.querySelector('#show-img-wrapper');
+const modal = document.getElementById('image-modal');
+const modalImage = document.getElementById('image-modal-image');
 
-showImgs.forEach((img, index) => {
-    img.addEventListener('click', () => {
-        showImg.src = imgs[index].src;
-        showImgWrapper.style.display = 'grid';
-        showImgWrapper.addEventListener('click', () => {
-            showImgWrapper.style.display = 'none';
-        }
-        );
+
+modalImages.forEach(image => {
+    image.onclick = () => {
+        let src = image.getAttribute('src');
+        modal.classList.add('open');
+        modalImage.setAttribute('src', src);
     }
-    );
-}
-);
+});
+
+modal.onclick = () => modal.classList.remove('open');
+modalImage.onclick = e => e.stopPropagation();

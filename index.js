@@ -42,7 +42,8 @@ loginButton.onclick = e => {
         password.classList.add('warning');
     }
     if (username.value && password.value) {
-        loginFeedback.innerText = username.value + ' ' + password.value;
+        const length = password.value.length;
+        loginFeedback.innerText = username.value + ' ' + '•'.repeat(length);
     }
 }
 username.oninput = () => {
