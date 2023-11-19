@@ -2,7 +2,7 @@ header {
     padding: calc(2 * var(--default-gap)) 0;
     margin-bottom: calc(2 * var(--default-gap));
 
-    background-image: url('../imgs/dark-abstract-wallpaper-background-smoke-texture - opacity.png');
+    background-image: url('./imgs/dark-abstract-wallpaper-background-smoke-texture\ -\ opacity.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,10 +11,16 @@ header {
         width: 700px;
         max-width: 98vw - (100% - 98vw);
         margin: 0 auto;
-    
+
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
         > h1, > p {
             text-align: center;
             color: var(--white);
+            padding: 0 3rem;
+            // background-color: var(--background-transparent-light);
         }
         > h1 {
             font-size: calc(4rem + 5vw);

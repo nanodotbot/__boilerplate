@@ -165,7 +165,7 @@
     font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    src: url('../Karla/static/Karla-Regular.ttf');
+    src: url('../Karla/static/Karla-SemiBold.ttf');
 }
 
 /* chrome scrollbar */
@@ -230,7 +230,7 @@ html,
     font-family: 'Source Code Pro';
     font-style: normal;
     font-weight: 400;
-    src: url('../Source_Code_Pro/static/SourceCodePro-Regular.ttf');
+    src: url('../Source_Code_Pro/static/SourceCodePro-SemiBold.ttf');
 }
 
 /* main */
@@ -278,6 +278,10 @@ h6 {
 
 p {
     width: 100%;
+}
+
+p > b {
+    font-weight: 400;
 }
 
 a {
